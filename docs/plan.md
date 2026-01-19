@@ -14,6 +14,47 @@
 
 ---
 
+## 1.1. 디자인 시스템: 빈티지 카페 컨셉
+
+### 색상 팔레트
+
+```css
+/* 주요 배경 */
+--vintage-cream: #f5e6d3;
+--vintage-beige: #e8d5c4;
+--vintage-sand: #d4c4b0;
+
+/* 브라운 계열 */
+--coffee-dark: #4a362a;
+--coffee-medium: #6b4423;
+--coffee-light: #8b4513;
+
+/* 피스타치오 그린 (포인트) */
+--pistachio-dark: #93a788;
+--pistachio-light: #a3b899;
+
+/* 텍스트 */
+--text-primary: #3e2723;
+--text-secondary: #6b5d57;
+--text-muted: #9e8a7f;
+```
+
+### 타이포그래피
+
+- **제목 폰트**: Playfair Display (세리프) - Google Fonts
+- **본문 폰트**: Geist (산세리프) - 이미 설정됨
+- **최소 폰트 크기**: 16px (본문)
+- **라인 높이**: 1.6~1.8
+
+### UI 요소 스타일
+
+- **카드**: 베이지/크림 배경, `shadow-lg`, `rounded-2xl`
+- **버튼**: 브라운 계열, 호버 시 밝아지는 효과 (`brightness-110`)
+- **배경**: 종이 텍스처 느낌의 부드러운 그라데이션
+- **장식**: 커피콩/쿠키 이모지 은은하게 배치 (선택적)
+
+---
+
 ## 2. 데이터 모델링 (Data Modeling)
 
 ### 2.1. 문항 데이터 (Questions)
