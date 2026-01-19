@@ -2,41 +2,41 @@
 
 ## Phase 1: 프로젝트 기본 설정
 
-- [ ] Tailwind CSS 설정 확인 및 커스텀 유틸리티 추가
-- [ ] shadcn/ui 초기 설정 및 필수 컴포넌트 설치
-- [ ] 모바일 컨테이너 레이아웃 구성
+- [x] Tailwind CSS 설정 확인 및 커스텀 유틸리티 추가
+- [x] shadcn/ui 초기 설정 및 필수 컴포넌트 설치
+- [x] 모바일 컨테이너 레이아웃 구성
 
 ## Phase 2: 타입 정의 및 데이터 생성
 
-- [ ] `src/types/test.ts` - 기본 타입 정의 (Dimension, Option, Question, TestResult)
-- [ ] `src/data/questions.ts` - 80개 문항 데이터 작성 (20단계 × 4변주)
-- [ ] `src/data/results.ts` - 32종 결과 데이터 작성 (16 MBTI × 2 Variant)
+- [x] `src/types/test.ts` - 기본 타입 정의 (Dimension, Option, Question, TestResult)
+- [x] `src/data/questions.ts` - 80개 문항 데이터 작성 (20단계 × 4변주)
+- [x] `src/data/results.ts` - 32종 결과 데이터 작성 (16 MBTI × 2 Variant)
 
 ## Phase 3: 상태 관리 구현
 
-- [ ] Zustand Store 설정 (`src/store/use-test-store.ts`)
-- [ ] Persist Middleware 설정 (SessionStorage 연동)
-- [ ] 답변 저장 및 현재 단계 관리 액션 구현
+- [x] Zustand Store 설정 (`src/store/use-test-store.ts`)
+- [x] Persist Middleware 설정 (SessionStorage 연동)
+- [x] 답변 저장 및 현재 단계 관리 액션 구현
 
 ## Phase 4: 공통 레이아웃 및 컴포넌트
 
-- [ ] `components/layouts/mobile-container.tsx` - 모바일 우선 레이아웃
-- [ ] `components/test/progress-bar.tsx` - 진행률 표시 컴포넌트
-- [ ] `components/test/question-card.tsx` - 문항 카드 컴포넌트
-- [ ] `components/ui/button.tsx` - 버튼 컴포넌트 (shadcn/ui)
+- [x] `components/layouts/mobile-container.tsx` - 모바일 우선 레이아웃
+- [x] `components/test/progress-bar.tsx` - 진행률 표시 컴포넌트
+- [x] `components/test/question-card.tsx` - 문항 카드 컴포넌트
+- [x] `components/ui/button.tsx` - 버튼 컴포넌트 (shadcn/ui)
 
 ## Phase 5: 페이지 구현
 
-- [ ] `app/page.tsx` - 랜딩 페이지 (시작하기 버튼)
-- [ ] `app/test/[step]/page.tsx` - 문항 페이지 (Dynamic Route)
-- [ ] `app/loading/page.tsx` - 결과 계산 대기 페이지
-- [ ] `app/result/[type]/page.tsx` - 결과 페이지 (SNS 공유 기능 포함)
+- [x] `app/page.tsx` - 랜딩 페이지 (시작하기 버튼)
+- [x] `app/test/[step]/page.tsx` - 문항 페이지 (Dynamic Route)
+- [x] `app/loading/page.tsx` - 결과 계산 대기 페이지
+- [x] `app/result/[type]/page.tsx` - 결과 페이지 (SNS 공유 기능 포함)
 
 ## Phase 6: 결과 산출 로직
 
-- [ ] `src/lib/calculation.ts` - MBTI 점수 계산 함수
-- [ ] `src/lib/calculation.ts` - Variant(A/B) 결정 로직
-- [ ] `src/lib/question-selector.ts` - 랜덤 문항 선택 로직
+- [x] `src/lib/calculation.ts` - MBTI 점수 계산 함수
+- [x] `src/lib/calculation.ts` - Variant(A/B) 결정 로직
+- [x] `src/lib/question-selector.ts` - 랜덤 문항 선택 로직
 
 ## Phase 7: AdSense 통합
 

@@ -1,26 +1,65 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 기본 색상 */
+  --background: #f5e6d3;
+  --foreground: #3e2723;
+
+  /* 빈티지 카페 컨셉 색상 */
+  --vintage-cream: #f5e6d3;
+  --vintage-beige: #e8d5c4;
+  --vintage-sand: #d4c4b0;
+
+  --coffee-dark: #4a362a;
+  --coffee-medium: #6b4423;
+  --coffee-light: #8b4513;
+
+  --pistachio-dark: #93a788;
+  --pistachio-light: #a3b899;
+
+  --text-primary: #3e2723;
+  --text-secondary: #6b5d57;
+  --text-muted: #9e8a7f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* 빈티지 색상 */
+  --color-vintage-cream: var(--vintage-cream);
+  --color-vintage-beige: var(--vintage-beige);
+  --color-vintage-sand: var(--vintage-sand);
+
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee-medium: var(--coffee-medium);
+  --color-coffee-light: var(--coffee-light);
+
+  --color-pistachio-dark: var(--pistachio-dark);
+  --color-pistachio-light: var(--pistachio-light);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  /* 폰트 */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  --font-serif: 'Playfair Display', serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* 커스텀 max-width */
+  --max-w-mobile: 28rem; /* 448px */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* 모바일 우선 유틸리티 */
+.max-w-mobile {
+  max-width: var(--max-w-mobile);
 }
