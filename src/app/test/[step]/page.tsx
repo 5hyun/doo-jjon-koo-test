@@ -79,8 +79,20 @@ export default function TestPage({ params }: TestPageProps) {
       <ProgressBar current={step} total={20} />
 
       {/* 문항 카드 */}
-      <div className='flex-1 flex items-center justify-center'>
+      <div className='flex-1 flex items-center justify-center px-4'>
         <QuestionCard question={question} onAnswer={handleAnswer} />
+      </div>
+
+      {/* 광고 영역 - UX를 방해하지 않도록 하단에 작게 배치 */}
+      <div className='w-full py-4 px-6 bg-cream-light/30'>
+        <div className='max-w-md mx-auto text-center'>
+          <p className='text-xs text-coffee-medium/50 mb-2'>광고</p>
+          <div className='bg-white/50 rounded-lg p-3 border border-coffee-light/20'>
+            <p className='text-sm text-coffee-medium'>
+              광고 영역 (Phase 7에서 실제 광고로 대체 예정)
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
