@@ -7,6 +7,7 @@ import { getQuestion } from '@/data/questions';
 import { selectRandomVariant } from '@/lib/question-selector';
 import { ProgressBar } from '@/components/test/progress-bar';
 import { QuestionCard } from '@/components/test/question-card';
+import { KakaoAd, CoupangAd } from '@/components/ads';
 
 interface TestPageProps {
   params: Promise<{ step: string }>;
@@ -84,14 +85,24 @@ export default function TestPage({ params }: TestPageProps) {
       </div>
 
       {/* 광고 영역 - UX를 방해하지 않도록 하단에 작게 배치 */}
-      <div className='w-full py-4 px-6 bg-cream-light/30'>
-        <div className='max-w-md mx-auto text-center'>
-          <p className='text-xs text-coffee-medium/50 mb-2'>광고</p>
-          <div className='bg-white/50 rounded-lg p-3 border border-coffee-light/20'>
-            <p className='text-sm text-coffee-medium'>
-              광고 영역 (Phase 7에서 실제 광고로 대체 예정)
-            </p>
-          </div>
+      <div className='w-full py-4 px-6 bg-vintage-cream/30'>
+        <div className='max-w-md mx-auto space-y-3'>
+          {/* 카카오 애드핏 - 모든 문제에서 표시 */}
+          <KakaoAd 
+            location="test"
+            width={320} 
+            height={50}
+            className="flex justify-center"
+          />
+          
+          {/* 쿠팡 광고 - 10번, 20번 문제에서만 표시 (중간, 마지막) */}
+          {(step === 10 || step === 20) && (
+            <CoupangAd 
+              subId={`test-step-${step}`}
+              type="dynamic"
+              className="w-full"
+            />
+          )}
         </div>
       </div>
     </div>

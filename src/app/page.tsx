@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useTestStore } from '@/store/use-test-store';
 import { Button } from '@/components/ui/button';
+import { KakaoAd, CoupangAd } from '@/components/ads';
 
 /**
  * 랜딩 페이지
@@ -41,6 +42,24 @@ export default function HomePage() {
           <span>•</span>
           <span>📊 32가지 결과</span>
         </div>
+      </div>
+
+      {/* 광고 영역 */}
+      <div className='max-w-md w-full space-y-4 mb-8'>
+        {/* 카카오 애드핏 광고 */}
+        <KakaoAd 
+          location="main"
+          width={320} 
+          height={100}
+          className="flex justify-center"
+        />
+        
+        {/* 쿠팡 파트너스 광고 */}
+        <CoupangAd 
+          subId="main-page" 
+          type="dynamic"
+          className="w-full"
+        />
       </div>
 
       {/* 시작 버튼 */}

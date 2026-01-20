@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { getResultById } from '@/data/results';
 import { useTestStore } from '@/store/use-test-store';
 import { Button } from '@/components/ui/button';
+import { KakaoAd, CoupangAd } from '@/components/ads';
 
 interface ResultPageProps {
   params: Promise<{ type: string }>;
@@ -158,6 +159,24 @@ export default function ResultPage({ params }: ResultPageProps) {
             {result.matching.bad}
           </p>
         </div>
+      </div>
+
+      {/* 광고 영역 */}
+      <div className='max-w-lg mx-auto space-y-4 mb-8'>
+        {/* 카카오 애드핏 광고 */}
+        <KakaoAd 
+          location="result"
+          width={320} 
+          height={100}
+          className="flex justify-center"
+        />
+        
+        {/* 쿠팡 파트너스 광고 - 배너 타입 */}
+        <CoupangAd 
+          subId={`result-${resultId}`}
+          type="banner"
+          className="w-full"
+        />
       </div>
 
       {/* 액션 버튼들 */}
