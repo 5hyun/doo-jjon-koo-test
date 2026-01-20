@@ -95,14 +95,14 @@ export default function TestPage({ params }: TestPageProps) {
             className="flex justify-center"
           />
           
-          {/* 쿠팡 광고 - 10번, 20번 문제에서만 표시 (중간, 마지막) */}
-          {(step === 10 || step === 20) && (
+          {/* 쿠팡 광고 - 10번, 20번 문제에서만 표시 (나중에 승인받으면 주석 해제) */}
+          {/* {(step === 10 || step === 20) && (
             <CoupangAd 
               subId={`test-step-${step}`}
               type="dynamic"
               className="w-full"
             />
-          )}
+          )} */}
         </div>
       </div>
     </div>

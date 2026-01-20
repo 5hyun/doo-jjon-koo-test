@@ -1,0 +1,22 @@
+{
+  "name": "두바이 쫀득 쿠키 테스트",
+  "short_name": "두쫀쿠",
+  "description": "나는 어떤 두바이 쿠키일까? 20개의 질문으로 알아보는 나만의 쿠키 성향 테스트",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5e6d3",
+  "theme_color": "#4a362a",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -171,12 +171,12 @@ export default function ResultPage({ params }: ResultPageProps) {
           className="flex justify-center"
         />
         
-        {/* 쿠팡 파트너스 광고 - 배너 타입 */}
-        <CoupangAd 
+        {/* 쿠팡 파트너스 광고 - 배너 타입 (나중에 승인받으면 주석 해제) */}
+        {/* <CoupangAd 
           subId={`result-${resultId}`}
           type="banner"
           className="w-full"
-        />
+        /> */}
       </div>
 
       {/* 액션 버튼들 */}

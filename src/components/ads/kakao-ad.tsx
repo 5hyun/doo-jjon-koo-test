@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type AdLocation = 'main' | 'test' | 'result';
 
@@ -49,6 +49,7 @@ export function KakaoAd({
 }: KakaoAdProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const isAdLoaded = useRef(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   // 환경 변수에서 광고 단위 ID 가져오기
   const getAdUnit = (): string => {
@@ -66,7 +67,14 @@ export function KakaoAd({
 
   const unit = getAdUnit();
 
+  // 클라이언트에서만 마운트
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     // 광고가 이미 로드되었으면 스킵
     if (isAdLoaded.current) return;
 
@@ -88,11 +96,16 @@ export function KakaoAd({
       // 클린업
       isAdLoaded.current = false;
     };
-  }, [unit]);
+  }, [unit, isMounted]);
+
+  // 클라이언트에서만 광고 렌더링 (hydration error 방지)
+  if (!isMounted) {
+    return <div className={`kakao-ad-container ${className}`} style={{ minHeight: height }} />;
+  }
 
   return (
-    <div className={`kakao-ad-container ${className}`}>
-      <div ref={adRef}>
+    <div className={`kakao-ad-container ${className}`} suppressHydrationWarning>
+      <div ref={adRef} suppressHydrationWarning>
         <ins
           className="kakao_ad_area"
           style={{ display: 'none' }}

@@ -54,12 +54,12 @@ export default function HomePage() {
           className="flex justify-center"
         />
         
-        {/* 쿠팡 파트너스 광고 */}
-        <CoupangAd 
+        {/* 쿠팡 파트너스 광고 - 나중에 승인받으면 주석 해제 */}
+        {/* <CoupangAd 
           subId="main-page" 
           type="dynamic"
           className="w-full"
-        />
+        /> */}
       </div>
 
       {/* 시작 버튼 */}
